@@ -1,1 +1,3 @@
-Retrieval Augmented Generation (RAG) improves LLM responses by retrieving external documents.
+My company uses Kubernetes for deployment.
+We follow microservices architecture.
+RAG helps reduce hallucination in LLMs.
