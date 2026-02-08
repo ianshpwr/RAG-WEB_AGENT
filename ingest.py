@@ -12,5 +12,6 @@ chunks = splitter.split_documents(docs)
 embeddings = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
 db = FAISS.from_documents(chunks, embeddings)
 
+
 db.save_local("db")
 print("✅ Knowledge base created")
