@@ -19,4 +19,3 @@ def web_search(query):
         snippets.append(item["snippet"])
 
     return "\n".join(snippets)
-g
