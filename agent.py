@@ -35,12 +35,18 @@ Web Context:
 
     # Call Groq LLM
     response = client.chat.completions.create(
-        model="llama3-8b-8192",
+        model="llama-3.1-8b-instant",
         messages=[
-            {
-                "role": "system",
-                "content": "Answer the question using ONLY the provided context. If the answer is not present, say you don't know."
-            },
+                    {
+            "role": "system",
+            "content": (
+                "You are a research assistant. "
+                "Answer the user's question ONLY using the provided RAG context and web search results. "
+                "If the information is insufficient or not found, say you do not know. "
+                "Do not guess or hallucinate."
+            )
+            }
+            ,
             {
                 "role": "user",
                 "content": f"{context}\n\nQuestion: {query}"
